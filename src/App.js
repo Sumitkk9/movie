@@ -51,9 +51,9 @@ function App() {
   }
   const redMovie = ()=>{
    
-  //  if(result[0].Response==="False"){
-  //   return <h1>no movies found</h1>
-  //  }
+   if(result[0].Response==="False"){
+    return <h1>no movies found</h1>
+   }
     return  result.map((res)=>(
       <MovieCard
       key={res.imdbID}
