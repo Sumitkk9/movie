@@ -1,0 +1,171 @@
+*{
+    background-color: rgb(101, 90, 90);
+}
+.mainCardDev{
+    width: 400px;
+    box-shadow: 0.25px 20px 20px 1px black;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: transparent;
+   
+  
+}
+.cardHead{
+    height: 300px;
+    
+  
+}
+.cardHead>img{
+   
+    width: 100%;
+    height: 320px;
+    
+}
+
+.tag{
+    position: absolute;
+    margin: 10px;
+    background-color:  #ff8008;
+ 
+    font-weight: bold;
+    color: white;
+    width: 90px;
+    height: 25px;
+    text-align: center;
+    border-radius: 20px;
+   
+}
+  
+.contentDiv{
+    position:relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    background: linear-gradient(to top, #000000, #434343);
+    display: grid;
+    grid-template-columns: 47% 6% 47%;
+    z-index: 100;
+ 
+   
+}
+.contentDiv1{
+   background-color: transparent;
+    margin-left: 30px;
+    
+}
+.contentDiv1>h3{
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0px;
+}
+.contentDiv1>p{
+    background-color: transparent;
+    font-size: 0.8rem;
+    color: rgb(201, 200, 200);
+     padding-top: 0px;
+}
+.contentDiv2{
+    justify-items: center;
+    background-color: transparent;
+    width: 2px;
+    border-right: 1px solid  #ff8008;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.contentDiv3{
+ overflow: hidden;
+ margin-top: 20px;
+ margin-left: 10px;
+ background-color: transparent;
+}
+.contentDiv3>h3{
+    color: #ff8008 ;
+    font-size:0.7rem ;
+    line-height: 0.5rem;
+background-color: transparent;
+}
+.contentDiv3>p{
+    color: rgb(201, 200, 200);
+    font-size:0.8rem;
+    background-color: transparent;
+}
+.actionDiv{
+    width: 100%;  
+    text-align: center;
+    background:  linear-gradient(to bottom,  #000000, #080807);
+    background-color: #000000;
+}
+.actionDiv>button{
+    border:none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 0.6rem;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 3px 0px black;
+    background:  linear-gradient(to bottom, #ff8008, #d8721f);
+}
+
+.serchOption{
+    width: 100%;
+    height: 15vh;
+    background-color: #2b1a1a;
+    background-size: cover;
+    background-repeat:no-repeat;
+    align-content: center;
+    margin-bottom: 10px;
+    
+}
+.serchOption>h2{
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    
+    margin: 0px;
+   
+  
+
+}
+.searchForm{
+ 
+     align-items: center;
+      text-align: center;
+   background-color: transparent;
+}
+.searchForm>input{
+    width: 50%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+    padding-left: 10px ;
+ }
+ 
+ .searchForm>button{
+    width: 20%;
+    height: 5.3vh;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    border-left: 1px solid black;
+    cursor: pointer;
+    font-size: 1rem;
+ }
+
+ .searchForm>button:hover{
+    transform: scale(0.99);
+    transition: ease-in-out 5ms;
+    background-color: #ff8008;
+    color: white;
+ }
+ 
