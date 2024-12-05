@@ -57,7 +57,7 @@
 }
 .contentDiv1>h3{
     background-color: transparent;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: white;
     margin-bottom: 0px;
 }
@@ -237,8 +237,11 @@ background-color: transparent;
 
 
  @media screen and (max-width: 720px) {
+    .mainCardDev{
+        width: 90%;
+    }
     .productsDiv{
-        justify-content: center;
+        justify-items: center;
         display: grid;
         grid-template-columns: 100%;
      } 
@@ -259,4 +262,8 @@ background-color: transparent;
         height: 360px;
         
      }
+     .serchOption>h2{
+       width: 90%;
+       padding: 5px;
+    }
  }

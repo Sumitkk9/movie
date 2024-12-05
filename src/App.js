@@ -41,7 +41,7 @@ function App() {
     },
     {
       imgurl: "https://rukminim2.flixcart.com/image/850/1000/jt8yxe80/poster/e/w/k/medium-wonder-wom11-woman-movie-poster-original-imafem3hvgkhfvuj.jpeg?q=20&crop=false",
-      name: "Avengers Endgame Poster",
+      name: "Avengers Endgame ",
       id: 3
     },
     {
