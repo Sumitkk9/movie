@@ -1,6 +1,8 @@
 import React from "react";
 import '../Style.css'
 
+
+
 const movieCard = ({img,title, dis,year,released,actors,imdbrating,mtype})=>{
    
    return<div className="mainCardDev">
