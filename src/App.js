@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import MovieCard from './component/movieCard';
-
+import Carousel from './component/Carousel';
 import { useSelector,useDispatch } from 'react-redux';
 import { fetchuri } from './store/features/fetcher';
 import React, { useEffect, useState } from 'react';
@@ -27,6 +27,7 @@ function App() {
   const [result, setResult] = useState()
 
  
+  const upcomingMoview=["tt27540784",]
 
   const posters = [
     {
@@ -90,6 +91,8 @@ function App() {
     setcurrentIndex((prevIndex)=> (prevIndex+3)% posters.length )
   },3000)
 
+
+
   return ()=> clearInterval(interval);
  },[setcurrentIndex])
 
@@ -115,6 +118,7 @@ function App() {
  const getCurrentMovies = ()=>{
   return posters.slice(currentIndex, currentIndex+3)
  }
+ const [showState,setShowState] = useState(false)
 
    const [imdbIds,setImdbIds] = useState([])
    const [more,setMore] = useState([])
@@ -135,6 +139,7 @@ function App() {
   const submitBtn = (e)=>{
     e.preventDefault()
     setMore([])
+    setShowState(true)
     funct(value)
    
  
@@ -174,7 +179,12 @@ console.log(more)
      
    
     <div className='serchOption'>
-    <h2>IMDB</h2>
+    <h2> <a 
+    style={{
+      backgroundColor:"transparent",
+      textDecoration:"none",
+      color:"black",
+    }} href='/'>IMDB</a> </h2>
 
   
 
@@ -186,11 +196,19 @@ console.log(more)
 
     </div>
 
+    {showState? <div className='productsDiv' >
+
+{more[1]?redMovie() : value? !more[1] && <h1 style={{color:"white",backgroundColor:"transparent"}}>Searching</h1> : ""  }
+</div> : 
     <div className='featureDiv'>
       <div className='featureDiv1'>
       {/* {more[1] && more.map(ids=>(<h1>{ids.Plot}</h1>))}  */}
+      <Carousel/>
       </div>
+      <div>
+      <h2 className='heading' style={{color:"yellow",margin:"5px",marginLeft:"12px"}}>Upcoming Movies</h2>
       <div className='featureDiv2'>
+        
       {getCurrentMovies().map(movie=>(
         <ShortMovieCard
                key={movie.id}
@@ -200,12 +218,11 @@ console.log(more)
         />
       ))}
       </div>
+      </div>
+     
     </div>
-   
-    <div className='productsDiv' >
-
-    {more[1]?redMovie() : value? !more[1] && <h1 style={{color:"white",backgroundColor:"transparent"}}>Searching</h1> : ""  }
-    </div>
+   }
+    
     </>
   );
 }
