@@ -98,10 +98,10 @@ function App() {
 
  const funct = async()=>{
   try {
-  const response = await fetch("https://www.omdbapi.com/?s="+ value + "&plot=full&apikey=4bc9a2c4")
+  const response = await fetch("https://www.omdbapi.com/?s="+ value.trim() + "&plot=full&apikey=4bc9a2c4")
   const data = await response.json()
   const mainData = data.Search
-  mainData&& mainData.map(async(resu) =>{
+  mainData && mainData.map(async(resu) =>{
     const mored = await fetch("https://www.omdbapi.com/?i=" + resu.imdbID + "&plot=short&apikey=4bc9a2c4")
     const res = await mored.json()
        setMore((prev)=> [...prev,res])
@@ -136,6 +136,7 @@ function App() {
   }
 
 
+
   const submitBtn = (e)=>{
     e.preventDefault()
     setMore([])
@@ -147,18 +148,20 @@ function App() {
   }
 
   const onChnageValue = (e)=>{
+    
     setValue(e.target.value)
     
   }
   
 
+  const desc = more.sort((a,b)=> b.Year-a.Year)
+
+ 
   
   const redMovie = ()=>{
-console.log(more)
-   if(result[0].Response==="False"){
-    return <h1>no movies found</h1>
-   }
-    return  result.map((res,index)=>{
+   
+  
+    return  desc.map((res,index)=>{
   
      return <MovieCard
       key={res.imdbID}
@@ -198,7 +201,10 @@ console.log(more)
 
     {showState? <div className='productsDiv' >
 
+    
+
 {more[1]?redMovie() : value? !more[1] && <h1 style={{color:"white",backgroundColor:"transparent"}}>Searching</h1> : ""  }
+
 </div> : 
     <div className='featureDiv'>
       <div className='featureDiv1'>
@@ -211,8 +217,8 @@ console.log(more)
         
       {getCurrentMovies().map(movie=>(
         <ShortMovieCard
-               key={movie.id}
-               id={movie.id}
+              key={movie.id}
+              id={movie.id}
               title={movie.name}
               imgurl={movie.imgurl}
         />
