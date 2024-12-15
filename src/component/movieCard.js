@@ -3,7 +3,7 @@ import '../Style.css'
 
 
 
-const movieCard = ({img,title, dis,year,released,actors,imdbrating,mtype})=>{
+const movieCard = ({viewMoreClicked,img,title, dis,year,released,actors,imdbrating,mtype})=>{
    
    return<div className="mainCardDev">
        
@@ -31,7 +31,7 @@ const movieCard = ({img,title, dis,year,released,actors,imdbrating,mtype})=>{
             </div>
         </div>
         <div className="actionDiv">
-            <button>View More</button>
+            <button onClick={viewMoreClicked}>View More</button>
         </div>
     </div>
 }

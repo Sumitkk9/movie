@@ -181,7 +181,8 @@ background-color: transparent;
  .productsDiv{
     margin: 10px;
     display: grid;
-    gap: 40px;
+    gap: 30px;
+    justify-content: center;
     grid-template-columns: repeat(3, 30%) ;
  }
 
@@ -200,12 +201,12 @@ background-color: transparent;
  }
  .featureDiv2{
     width: 90%;
-    background-color: #000000;
+    background: linear-gradient(to top,  #000000, #1b1b1b, #3a3939);
     padding: 5px;
     height: 62vh;
     justify-self: center;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 1px white;
+   
     
  }
 
@@ -218,12 +219,16 @@ background-color: transparent;
 
  .shortMovieCard{
     margin-bottom: 5px;
+    cursor: pointer;
     padding: 5px;
     display: flex;
+    background-color: transparent;
     border-radius: 5px;
+  
  }
  .moviePoster>img{
-   max-width: 88px;
+  width: 88px;
+   height: 125px;
  }
  .movieDetails{
     margin-left: 10px;
@@ -231,9 +236,12 @@ background-color: transparent;
  }
  .movieDetails>h5{
     background-color: transparent;
+    color: rgb(175, 174, 174);
  }
  .movieDetails>h3{
+    color: white;
     background-color: transparent;
+
  }
 
 
@@ -256,6 +264,7 @@ background-color: transparent;
   .imgDiv{
     min-width: 100%;
     height: 70vh;
+    cursor: pointer;
   }
   .carousel-image-home{
     min-width: 100%;
@@ -313,7 +322,142 @@ background-color: transparent;
  }
 
 
- @media screen and (max-width: 720px) {
+ 
+
+ /* propduct detail page */
+
+ .proThumbDiv{
+   
+    margin: 20px;
+   
+ }
+
+ .proThumbDivLft {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.proThumbDivLftBefore {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(15px); /* Blur only applies to the pseudo-element */
+    z-index: 1;
+}
+
+.pImg {
+    position: relative; /* Positioned within .proThumbDivLft */
+    z-index: 2; /* Higher than the pseudo-element */
+    background-color:#6463637a;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 70% 30%;
+    margin-top: 10vh;
+    width: 100%;
+    padding: 10px;
+    height: 67%; /* Centers content */
+}
+
+.pImg > img {
+    position: absolute;
+    background-color: transparent;
+    padding: 5px;
+    right: 30px;
+    width: 180px;
+    filter: none; 
+    border-radius: 15px;
+}
+.movieDetails{
+    align-content: center;
+}
+.movieDetailss{
+    background-color: transparent;
+    width: 73%;
+}
+.movieDetailss>h2{
+    color: rgb(233, 233, 233);
+    font-size: 2rem;
+    background-color: transparent;
+}
+.movieDetailss>span{
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+.movieDetails>span{
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+.movieDetails>p{
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+.ratingDiv{
+    background-color: transparent;
+}
+.ratings{
+    background-color: transparent;
+}
+.ratings>p{
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+.ratings>span{
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+.proThumbDivRt{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.storyLineDiv>h2{
+    padding-left: 10px;
+    color: white;
+    font-size: 2rem;
+}
+
+.moreInfoDiv>h3{
+    color: white;
+    font-size: 0.8rem;
+    
+}
+.moreInfoDiv>hr{
+ 
+ 
+   
+   
+}
+
+
+@media screen and (max-width: 720px) {
+    .movieDetailss>h2{
+        
+        font-size: 1.5rem;
+      
+        overflow: hideen;
+  
+    }
+    .pImg {
+        display: grid;
+        grid-template-columns: 90% 10%;
+       
+    }
+    .pImg > img {
+        top: -60px;
+        width: 100px;
+       
+    }
     .imgDiv{
         min-width: 100%;
         height: 40vh;

@@ -5,12 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import { store } from './store/store';
+import { BrowserRouter as Router , Routes, Route } from 'react-router-dom';
+import Detailpage from './component/detailpage';
+import Searchpage from './component/saerchpage';
+import Header from './component/header';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <Provider store={store} >
-    <App/>
+
+    
+    <Router>
+    <Header/>
+    <Routes>
+      <Route  path='/' element={<App/>}  />
+      <Route  path='/search/:value' element={<Searchpage/>}  />
+      <Route  path='/title/:imdbid' element={<Detailpage/>}  />
+    </Routes>
+    </Router>
   </Provider>
 );
 
