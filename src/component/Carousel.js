@@ -6,6 +6,12 @@ const Carousel = ({onclickCarousel})=>{
 
     const [currentIndex,setCurrentIndex] = useState(0)
     const image = [ {
+        thumb:"https://m.economictimes.com/thumb/msid-113607812,width-1200,height-900,resizemode-4,imgsize-17336/the-batman-part-ii-heres-when-robert-pattinson-starrer-sequel-will-release.jpg",
+        poster:"https://m.media-amazon.com/images/M/MV5BMTU2NzhiYWUtYThlZi00OWIyLTk3YWEtZjY3NmJjOTZiZDAyXkEyXkFqcGc@._V1_SX300.jpg",
+        title: "The Batman Part II",
+        desc:"I am vengeance. I am the night. I am Batman.",
+        imdbId:  "tt19850008"
+    },{
         thumb:"https://www.hindustantimes.com/ht-img/img/2024/04/08/1600x900/Allu_Arjun_Pushpa_look_1712563294862_1712563305669.jpg",
         poster:"https://m.media-amazon.com/images/M/MV5BNWU1ZWFhNGQtZDhlZC00ZWFlLTlmNmEtN2VmYmZiN2Y5ZmQ2XkEyXkFqcGc@._V1_.jpg",
         title: "Pushpa: The Rule - Part 2",
