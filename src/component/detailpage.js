@@ -2,7 +2,7 @@ import React, {useState,useEffect} from "react";
 import '../Style.css'
 import { Fetecher } from "../fetcher";
 import { useParams } from "react-router-dom";
-
+import Loading from "./loading";
 const Detailpage = ()=>{
     const prams = useParams()
     const [result,setResult]= useState([])
@@ -26,7 +26,7 @@ const Detailpage = ()=>{
     return <div>
         {/* top panel */}
 
-        {loading?  <h1 style={{textAlign:"center"}}>loading...</h1> :
+        {loading? <Loading/> :
         <div className="proThumbDiv">
             <div className="proThumbDivLft">
                 <img  className="proThumbDivLftBefore"src={result.Poster} alt="backgroundPoster"/>

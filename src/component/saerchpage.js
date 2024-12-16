@@ -3,6 +3,7 @@ import { Fetecher } from "../fetcher";
 import { useParams,useNavigate } from "react-router-dom";
 import MovieCard from "./movieCard";
 import '../Style.css'
+import Loading from "./loading";
 
 const Searchpage = ()=>{
 
@@ -67,7 +68,7 @@ const Searchpage = ()=>{
 
     
 
-    {more[0]? redMovie() : value? !more[1] && <h1 style={{color:"white",backgroundColor:"transparent"}}>Searching</h1> : ""  }
+    {more[0]? redMovie() : value? !more[1] && <Loading/> : ""  }
     
     </div>
 }
